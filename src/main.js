@@ -8,86 +8,86 @@
    ============================================= */
 const MEMBERS = [
   {
-    name: 'America Montaño',
-    role: 'Presidenta',
-    photo: '/member_photos/america_montaño.jpg',
+    name: 'Valeria Varelas',
+    role: 'Chair',
+    photo: '/member_photos/valeria_varelas.jpg',
     github: '#',
     linkedin: '#',
   },
   {
-    name: 'Danaé Álvarez',
-    role: 'Vicepresidenta',
+    name: 'Enrique Díaz',
+    role: 'Vice Chair',
+    photo: '/member_photos/enrique_diaz.jpg',
+    github: '#',
+    linkedin: '#',
+  },
+  {
+    name: 'Erwin Daowz',
+    role: 'Treasurer',
+    photo: '/member_photos/erwin_daowz.jpg',
+    github: '#',
+    linkedin: '#',
+  },
+  {
+    name: 'Danae Álvarez',
+    role: 'Lead de Social Media',
     photo: '/member_photos/danae_alvarez.jpg',
     github: '#',
     linkedin: '#',
   },
   {
+    name: 'Isaac Gámez',
+    role: 'Co-Lead de Social Media',
+    photo: '/member_photos/isaac_gamez.jpg',
+    github: '#',
+    linkedin: '#',
+  },
+  {
     name: 'Diego Paz',
-    role: 'Miembro',
+    role: 'Social Media',
     photo: '/member_photos/diego_paz.jpg',
     github: '#',
     linkedin: '#',
   },
   {
     name: 'Eddie Zapata',
-    role: 'Miembro',
+    role: 'Desarrollo de Software',
     photo: '/member_photos/eddie_zapata.jpg',
     github: '#',
     linkedin: '#',
   },
   {
-    name: 'Emiliano Flores',
-    role: 'Miembro',
-    photo: '/member_photos/emiliano_flores.jpeg',
-    github: '#',
-    linkedin: '#',
-  },
-  {
-    name: 'Enrique Hernández',
-    role: 'Secretario',
-    photo: '/member_photos/enrique_hernandez.jpg',
-    github: '#',
-    linkedin: '#',
-  },
-  {
-    name: 'Erwin Daowz',
-    role: 'Tesorero',
-    photo: '/member_photos/erwin_daowz.jpg',
-    github: '#',
-    linkedin: '#',
-  },
-  {
-    name: 'Isaac Gámez',
-    role: 'Miembro',
-    photo: '/member_photos/isaac_gamez.jpg',
-    github: '#',
-    linkedin: '#',
-  },
-  {
-    name: 'Jesús Cerecedo',
-    role: 'Miembro',
-    photo: '/member_photos/jesus_cerecedo.jpg',
+    name: 'America Montaño',
+    role: 'Member',
+    photo: '/member_photos/america_montano.jpg',
     github: '#',
     linkedin: '#',
   },
   {
     name: 'Joseph Romero',
-    role: 'Miembro',
+    role: 'Social Media',
     photo: '/member_photos/joseph_romero.jpg',
     github: '#',
     linkedin: '#',
   },
   {
-    name: 'Miguel Félix',
-    role: 'Relacionista',
-    photo: '/member_photos/miguel_felix.jpg',
+    name: 'Jesús Cerecedo',
+    role: 'Member',
+    photo: '/member_photos/jesus_cerecedo.jpg',
     github: '#',
     linkedin: '#',
   },
   {
-    name: 'Valeria Varelas',
-    role: 'Miembro',
-    photo: '/member_photos/valeria_varelas.jpg',
+    name: 'Emiliano Flores',
+    role: 'Member',
+    photo: '/member_photos/emiliano_flores.jpeg',
+    github: '#',
+    linkedin: '#',
+  },
+  {
+    name: 'Dr. Miguel Félix',
+    role: 'Faculty Advisor',
+    photo: '/member_photos/miguel_felix.jpg',
     github: '#',
     linkedin: '#',
   },
@@ -136,9 +136,9 @@ const EVENTS = [
    NAVBAR — scroll effect + mobile
    ============================================= */
 function initNavbar() {
-  const navbar  = document.getElementById('navbar');
-  const ham     = document.getElementById('hamburger');
-  const links   = document.getElementById('navLinks');
+  const navbar = document.getElementById('navbar');
+  const ham = document.getElementById('hamburger');
+  const links = document.getElementById('navLinks');
   const navAnchors = document.querySelectorAll('.nav-link');
 
   // Scroll: add .scrolled class
