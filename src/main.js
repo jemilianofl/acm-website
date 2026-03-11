@@ -17,7 +17,7 @@ const MEMBERS = [
   {
     name: 'Enrique Díaz',
     role: 'Vice Chair',
-    photo: '/member_photos/enrique_diaz.jpg',
+    photo: '/member_photos/enrique_hernandez.jpg',
     github: '#',
     linkedin: '#',
   },
