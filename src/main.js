@@ -59,7 +59,7 @@ const MEMBERS = [
   {
     name: 'America Montaño',
     role: 'Member',
-    photo: '/member_photos/america_montano.jpg',
+    photo: '/member_photos/america_montaño.jpg',
     github: '#',
     linkedin: '#',
   },
