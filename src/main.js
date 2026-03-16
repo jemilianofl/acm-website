@@ -36,16 +36,16 @@ const MEMBERS = [
     linkedin: '#',
   },
   {
-    name: 'Isaac Gámez',
+    name: 'Diego Paz',
     role: 'Co-Lead de Social Media',
-    photo: '/member_photos/isaac_gamez.jpg',
+    photo: '/member_photos/diego_paz.jpg',
     github: '#',
     linkedin: '#',
   },
   {
-    name: 'Diego Paz',
+    name: 'Isaac Gámez',
     role: 'Social Media',
-    photo: '/member_photos/diego_paz.jpg',
+    photo: '/member_photos/isaac_gamez.jpg',
     github: '#',
     linkedin: '#',
   },
@@ -79,7 +79,7 @@ const MEMBERS = [
   },
   {
     name: 'Emiliano Flores',
-    role: 'Member',
+    role: 'Desarollo de Software',
     photo: '/member_photos/emiliano_flores.jpeg',
     github: '#',
     linkedin: '#',
@@ -95,41 +95,36 @@ const MEMBERS = [
 
 const EVENTS = [
   {
-    title: 'Hackathon IPN 2025',
-    description: 'Competencia de 24 horas donde equipos interdisciplinarios resuelven retos del mundo real con tecnología.',
-    date: 'Abril 2025',
+    title: 'Reclutamiento',
+    description: '¡Únete a nuestro equipo! Prepara tu CV y tu creatividad para nuestro proceso de selección. Fecha límite: 26 de Marzo del 2026',
+    date: '16 de Marzo del 2026',
+    status: 'In progress',
+    link: 'https://forms.gle/tB4tXLdq8yqes8BU8',
+  },
+  {
+    title: 'Google Event 2026',
+    description: '¡Google llega a UPIITA! Ven y conoce a una de las empresas líderes en tecnología del mundo. Trae tu CV para tener la oportunidad de ser contratado y hacer networking con reclutadores de Google.',
+    date: '17 de Marzo del 2026',
     status: 'upcoming',
   },
   {
-    title: 'Taller: Introducción a Machine Learning',
-    description: 'Sesión práctica con Python y scikit-learn para explorar modelos de clasificación y regresión desde cero.',
-    date: 'Marzo 2025',
+    title: 'Reel #1 “Un día siendo ingeniero de ACM”',
+    description: '¡Conoce cómo es un día en la vida de un estdudiante de ingeniería de ACM!',
+    date: '20 de Marzo del 2026',
     status: 'upcoming',
   },
   {
-    title: 'Charla: Carreras en Ciberseguridad',
-    description: 'Plática con profesionales del sector sobre rutas de carrera, certificaciones y tendencias en seguridad informática.',
-    date: 'Febrero 2025',
-    status: 'past',
+    title: 'Taller GitHub',
+    description: '¡Aprende a usar GitHub con nosotros!',
+    date: '27 de Marzo del 2026',
+    status: 'upcoming',
   },
   {
-    title: 'Workshop: Git y GitHub para equipos',
-    description: 'Aprende flujos de trabajo colaborativo con control de versiones, pull requests y buenas prácticas de código.',
-    date: 'Enero 2025',
+    title: 'Movie Night - PRESENTACION CHAPTER',
+    description: '¡Ven a ver una peli con nosotros en el auditorio de UPIITA, y conoce a los miembros del capítulo!',
+    date: '11 de Marzo del 2026',
     status: 'past',
-  },
-  {
-    title: 'Networking Night UPIITA × ACM',
-    description: 'Evento de conexión entre estudiantes, egresados e industria. Conoce oportunidades laborales y de investigación.',
-    date: 'Diciembre 2024',
-    status: 'past',
-  },
-  {
-    title: 'Introducción a WebAssembly',
-    description: 'Sesión técnica sobre el futuro de las aplicaciones web de alto rendimiento con WASM y Rust.',
-    date: 'Noviembre 2024',
-    status: 'past',
-  },
+  }
 ];
 
 /* =============================================
@@ -226,14 +221,29 @@ function initMembers() {
    EVENTS
    ============================================= */
 function buildEventCard(event) {
+  let badgeText = '';
+  if (event.status === 'upcoming') badgeText = 'Próximo';
+  else if (event.status === 'past') badgeText = 'Pasado';
+  else if (event.status === 'In progress') badgeText = 'En curso';
+  else badgeText = event.status;
+
+  // Creamos una clase CSS segura para el status (ej. "In progress" -> "in-progress")
+  const statusClass = event.status.toLowerCase().replace(' ', '-');
+
+  // Botón opcional si existe el link
+  const linkHtml = event.link
+    ? `<a href="${event.link}" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="margin-top: 16px; padding: 10px 24px; font-size: 0.85rem;">Ver más / Registro</a>`
+    : '';
+
   return `
     <div class="event-card" data-animate>
       <div class="event-header">
-        <span class="event-badge ${event.status}">${event.status === 'upcoming' ? 'Próximo' : 'Pasado'}</span>
+        <span class="event-badge ${statusClass}">${badgeText}</span>
         <span class="event-date">${event.date}</span>
       </div>
       <h3>${event.title}</h3>
       <p>${event.description}</p>
+      ${linkHtml}
     </div>
   `;
 }
