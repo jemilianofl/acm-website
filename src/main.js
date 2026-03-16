@@ -51,7 +51,7 @@ const MEMBERS = [
   },
   {
     name: 'Eddie Zapata',
-    role: 'Desarrollo de Software',
+    role: 'Software Developer',
     photo: '/member_photos/eddie_zapata.jpg',
     github: '#',
     linkedin: '#',
@@ -79,7 +79,7 @@ const MEMBERS = [
   },
   {
     name: 'Emiliano Flores',
-    role: 'Desarollo de Software',
+    role: 'Software Developer',
     photo: '/member_photos/emiliano_flores.jpeg',
     github: '#',
     linkedin: '#',
