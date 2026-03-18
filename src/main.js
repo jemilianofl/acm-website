@@ -12,14 +12,14 @@ const MEMBERS = [
     role: 'Chair',
     photo: '/member_photos/valeria_varelas.jpg',
     github: '#',
-    linkedin: '#',
+    linkedin: 'https://www.linkedin.com/in/lidia-valeria-avila-varelas-9a5631303/',
   },
   {
-    name: 'Enrique Díaz',
+    name: 'Enrique Hernández',
     role: 'Vice Chair',
     photo: '/member_photos/enrique_hernandez.jpg',
-    github: '#',
-    linkedin: '#',
+    github: 'https://github.com/HdezAlpha20028',
+    linkedin: 'https://www.linkedin.com/in/enrique-hern%C3%A1ndez-romero-ba9b74383/',
   },
   {
     name: 'Erwin Daowz',
@@ -29,60 +29,60 @@ const MEMBERS = [
     linkedin: '#',
   },
   {
-    name: 'Danae Álvarez',
+    name: 'Danae Alvarez',
     role: 'Lead de Social Media',
     photo: '/member_photos/danae_alvarez.jpg',
     github: '#',
-    linkedin: '#',
-  },
-  {
-    name: 'Isaac Gámez',
-    role: 'Co-Lead de Social Media',
-    photo: '/member_photos/isaac_gamez.jpg',
-    github: '#',
-    linkedin: '#',
+    linkedin: 'https://mx.linkedin.com/in/danae-alvarez-297145285',
   },
   {
     name: 'Diego Paz',
-    role: 'Social Media',
+    role: 'Co-Lead de Social Media',
     photo: '/member_photos/diego_paz.jpg',
-    github: '#',
-    linkedin: '#',
+    github: 'https://github.com/DieGOAzael',
+    linkedin: 'https://www.linkedin.com/in/diego-azael-pérez-paz-7894533ab',
+  },
+  {
+    name: 'Isaac Gámez',
+    role: 'Social Media',
+    photo: '/member_photos/isaac_gamez.jpg',
+    github: 'https://github.com/Qbiit',
+    linkedin: 'https://www.linkedin.com/in/isaacgamezg/',
   },
   {
     name: 'Eddie Zapata',
-    role: 'Desarrollo de Software',
+    role: 'Software Developer',
     photo: '/member_photos/eddie_zapata.jpg',
-    github: '#',
-    linkedin: '#',
+    github: 'https://github.com/EddieZC20',
+    linkedin: 'https://www.linkedin.com/in/eddie-zapata-b31748340/',
   },
   {
     name: 'America Montaño',
     role: 'Member',
     photo: '/member_photos/america_montaño.jpg',
-    github: '#',
-    linkedin: '#',
+    github: 'https://github.com/caitmeri',
+    linkedin: 'https://www.linkedin.com/in/montaño-mata-america-itzel-a128982b2',
   },
   {
     name: 'Joseph Romero',
     role: 'Social Media',
     photo: '/member_photos/joseph_romero.jpg',
     github: '#',
-    linkedin: '#',
+    linkedin: 'https://www.linkedin.com/in/joseph-romero-tapia-09883a258',
   },
   {
     name: 'Jesús Cerecedo',
     role: 'Member',
     photo: '/member_photos/jesus_cerecedo.jpg',
-    github: '#',
-    linkedin: '#',
+    github: 'https://github.com/JesusCCGG',
+    linkedin: 'https://www.linkedin.com/in/jesus-cerecedo',
   },
   {
     name: 'Emiliano Flores',
-    role: 'Member',
+    role: 'Software Developer',
     photo: '/member_photos/emiliano_flores.jpeg',
-    github: '#',
-    linkedin: '#',
+    github: 'https://github.com/jemilianofl',
+    linkedin: 'https://www.linkedin.com/in/jemiliano-flores/',
   },
   {
     name: 'Dr. Miguel Félix',
@@ -95,41 +95,36 @@ const MEMBERS = [
 
 const EVENTS = [
   {
-    title: 'Hackathon IPN 2025',
-    description: 'Competencia de 24 horas donde equipos interdisciplinarios resuelven retos del mundo real con tecnología.',
-    date: 'Abril 2025',
+    title: 'Reclutamiento',
+    description: '¡Únete a nuestro equipo! Prepara tu CV y tu creatividad para nuestro proceso de selección. Fecha límite: 26 de Marzo del 2026',
+    date: '16 de Marzo del 2026',
+    status: 'In progress',
+    link: 'https://forms.gle/tB4tXLdq8yqes8BU8',
+  },
+  {
+    title: 'Google Event 2026',
+    description: '¡Google llega a UPIITA! Ven y conoce a una de las empresas líderes en tecnología del mundo. Trae tu CV para tener la oportunidad de ser contratado y hacer networking con reclutadores de Google.',
+    date: '17 de Marzo del 2026',
     status: 'upcoming',
   },
   {
-    title: 'Taller: Introducción a Machine Learning',
-    description: 'Sesión práctica con Python y scikit-learn para explorar modelos de clasificación y regresión desde cero.',
-    date: 'Marzo 2025',
+    title: 'Reel #1 “Un día siendo ingeniero de ACM”',
+    description: '¡Conoce cómo es un día en la vida de un estdudiante de ingeniería de ACM!',
+    date: '20 de Marzo del 2026',
     status: 'upcoming',
   },
   {
-    title: 'Charla: Carreras en Ciberseguridad',
-    description: 'Plática con profesionales del sector sobre rutas de carrera, certificaciones y tendencias en seguridad informática.',
-    date: 'Febrero 2025',
-    status: 'past',
+    title: 'Taller GitHub',
+    description: '¡Aprende a usar GitHub con nosotros!',
+    date: '27 de Marzo del 2026',
+    status: 'upcoming',
   },
   {
-    title: 'Workshop: Git y GitHub para equipos',
-    description: 'Aprende flujos de trabajo colaborativo con control de versiones, pull requests y buenas prácticas de código.',
-    date: 'Enero 2025',
+    title: 'Movie Night - PRESENTACION CHAPTER',
+    description: '¡Ven a ver una peli con nosotros en el auditorio de UPIITA, y conoce a los miembros del capítulo!',
+    date: '11 de Marzo del 2026',
     status: 'past',
-  },
-  {
-    title: 'Networking Night UPIITA × ACM',
-    description: 'Evento de conexión entre estudiantes, egresados e industria. Conoce oportunidades laborales y de investigación.',
-    date: 'Diciembre 2024',
-    status: 'past',
-  },
-  {
-    title: 'Introducción a WebAssembly',
-    description: 'Sesión técnica sobre el futuro de las aplicaciones web de alto rendimiento con WASM y Rust.',
-    date: 'Noviembre 2024',
-    status: 'past',
-  },
+  }
 ];
 
 /* =============================================
@@ -203,15 +198,22 @@ function initParticles() {
    ============================================= */
 
 function buildMemberCard(member) {
+  const githubLink = member.github && member.github !== '#'
+    ? `<a class="member-link" href="${member.github}" target="_blank" rel="noopener">GitHub</a>`
+    : '';
+  const linkedinLink = member.linkedin && member.linkedin !== '#'
+    ? `<a class="member-link" href="${member.linkedin}" target="_blank" rel="noopener">LinkedIn</a>`
+    : '';
+  const linksHtml = (githubLink || linkedinLink)
+    ? `<div class="member-links">${githubLink}${linkedinLink}</div>`
+    : '';
+
   return `
     <div class="member-card" data-animate>
       <img class="member-avatar" src="${member.photo}" alt="${member.name}" loading="lazy" />
       <div class="member-name">${member.name}</div>
       <div class="member-role">${member.role}</div>
-      <div class="member-links">
-        <a class="member-link" href="${member.github}" target="_blank" rel="noopener">GitHub</a>
-        <a class="member-link" href="${member.linkedin}" target="_blank" rel="noopener">LinkedIn</a>
-      </div>
+      ${linksHtml}
     </div>
   `;
 }
@@ -226,14 +228,29 @@ function initMembers() {
    EVENTS
    ============================================= */
 function buildEventCard(event) {
+  let badgeText = '';
+  if (event.status === 'upcoming') badgeText = 'Próximo';
+  else if (event.status === 'past') badgeText = 'Pasado';
+  else if (event.status === 'In progress') badgeText = 'En curso';
+  else badgeText = event.status;
+
+  // Creamos una clase CSS segura para el status (ej. "In progress" -> "in-progress")
+  const statusClass = event.status.toLowerCase().replace(' ', '-');
+
+  // Botón opcional si existe el link
+  const linkHtml = event.link
+    ? `<a href="${event.link}" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="margin-top: 16px; padding: 10px 24px; font-size: 0.85rem;">Ver más / Registro</a>`
+    : '';
+
   return `
     <div class="event-card" data-animate>
       <div class="event-header">
-        <span class="event-badge ${event.status}">${event.status === 'upcoming' ? 'Próximo' : 'Pasado'}</span>
+        <span class="event-badge ${statusClass}">${badgeText}</span>
         <span class="event-date">${event.date}</span>
       </div>
       <h3>${event.title}</h3>
       <p>${event.description}</p>
+      ${linkHtml}
     </div>
   `;
 }
