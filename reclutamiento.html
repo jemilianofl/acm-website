@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reclutamiento — ACM UPIITA</title>
+</head>
+
+<body>
+  <style>
+    
+    @import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700&family=Space+Mono:wght@400;700&display=swap');
+
+    .acm-section {
+      font-family: 'Sora', sans-serif;
+      background: #ffffff;
+      overflow: hidden;
+      color: #1a4f86;
+    }
+
+    .hero {
+      background: #1a4f86;
+      padding: 80px 40px 100px;
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -80px;
+      right: -80px;
+      width: 340px;
+      height: 340px;
+      border-radius: 50%;
+      background: #144fd5;
+      opacity: 0.18;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -60px;
+      left: -60px;
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+      background: #c5d6ec;
+      opacity: 0.12;
+    }
+
+    .acm-logo-area {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+      margin-bottom: 28px;
+      animation: fadeDown 0.8s ease both;
+    }
+
+    .logo-placeholder {
+      width: 64px;
+      height: 64px;
+      border-radius: 14px;
+      background: #144fd5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Space Mono', monospace;
+      font-weight: 700;
+      font-size: 18px;
+      color: #ffffff;
+      border: 2px solid rgba(197, 214, 236, 0.4);
+      flex-shrink: 0;
+    }
+
+    .brand-text {
+      text-align: left;
+    }
+
+    .brand-text .org-name {
+      font-size: 22px;
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.1;
+      letter-spacing: -0.5px;
+    }
+
+    .brand-text .org-sub {
+      font-size: 13px;
+      color: #c5d6ec;
+      font-weight: 300;
+      letter-spacing: 0.5px;
+    }
+
+    .hero h1 {
+      font-size: clamp(28px, 5vw, 48px);
+      font-weight: 700;
+      color: #ffffff;
+      margin: 0 0 16px;
+      line-height: 1.15;
+      letter-spacing: -1px;
+      animation: fadeDown 0.8s 0.15s ease both;
+    }
+
+    .hero h1 span {
+      color: #c5d6ec;
+    }
+
+    .hero p.tagline {
+      font-size: 16px;
+      color: rgba(197, 214, 236, 0.85);
+      max-width: 520px;
+      margin: 0 auto 36px;
+      font-weight: 300;
+      line-height: 1.7;
+      animation: fadeDown 0.8s 0.25s ease both;
+    }
+
+    .hero-cta {
+      display: inline-block;
+      background: #144fd5;
+      color: #ffffff;
+      padding: 14px 36px;
+      border-radius: 50px;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      border: none;
+      transition: transform 0.2s, background 0.2s;
+      animation: fadeDown 0.8s 0.35s ease both;
+      text-decoration: none;
+    }
+
+    .hero-cta:hover {
+      background: #c5d6ec;
+      color: #1a4f86;
+      transform: translateY(-3px);
+    }
+
+    .wave-divider {
+      display: block;
+      width: 100%;
+      height: 60px;
+      background: #1a4f86;
+      clip-path: ellipse(55% 100% at 50% 0%);
+    }
+
+    .benefits-section {
+      padding: 60px 40px;
+      background: #ffffff;
+    }
+
+    .section-label {
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 3px;
+      color: #144fd5;
+      text-transform: uppercase;
+      text-align: center;
+      margin-bottom: 12px;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s ease;
+    }
+
+    .section-label.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .section-title {
+      font-size: clamp(22px, 3vw, 32px);
+      font-weight: 700;
+      color: #1a4f86;
+      text-align: center;
+      margin: 0 0 48px;
+      letter-spacing: -0.5px;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s 0.1s ease;
+    }
+
+    .section-title.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .benefit-card {
+      background: #f4f8fd;
+      border: 1.5px solid #c5d6ec;
+      border-radius: 18px;
+      padding: 28px 22px;
+      text-align: center;
+      transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s;
+      opacity: 0;
+      transform: translateY(30px);
+      cursor: default;
+    }
+
+    .benefit-card.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .benefit-card:hover {
+      transform: translateY(-6px);
+      border-color: #144fd5;
+      box-shadow: 0 12px 30px rgba(20, 79, 213, 0.12);
+    }
+
+    .benefit-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      background: #1a4f86;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px;
+    }
+
+    .benefit-icon svg {
+      width: 26px;
+      height: 26px;
+      fill: none;
+      stroke: #c5d6ec;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .benefit-card h3 {
+      font-size: 15px;
+      font-weight: 600;
+      color: #1a4f86;
+      margin: 0 0 8px;
+    }
+
+    .benefit-card p {
+      font-size: 13px;
+      color: #4a7cb5;
+      line-height: 1.6;
+      margin: 0;
+      font-weight: 300;
+    }
+
+    .join-section {
+      background: #f0f6ff;
+      border-top: 1.5px solid #c5d6ec;
+      padding: 70px 40px;
+    }
+
+    .join-wrapper {
+      max-width: 660px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .steps-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      margin: 40px 0;
+      position: relative;
+    }
+
+    .steps-list::before {
+      content: '';
+      position: absolute;
+      left: 28px;
+      top: 24px;
+      bottom: 24px;
+      width: 2px;
+      background: #c5d6ec;
+    }
+
+    .step-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      padding: 16px 0;
+      text-align: left;
+      opacity: 0;
+      transform: translateX(-20px);
+      transition: all 0.5s ease;
+    }
+
+    .step-item.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .step-num {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: #1a4f86;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Space Mono', monospace;
+      font-size: 16px;
+      font-weight: 700;
+      color: #c5d6ec;
+      flex-shrink: 0;
+      z-index: 1;
+      border: 3px solid #f0f6ff;
+    }
+
+    .step-content h4 {
+      font-size: 15px;
+      font-weight: 600;
+      color: #1a4f86;
+      margin: 0 0 4px;
+      padding-top: 14px;
+    }
+
+    .step-content p {
+      font-size: 13px;
+      color: #4a7cb5;
+      margin: 0;
+      font-weight: 300;
+      line-height: 1.6;
+    }
+
+    .cta-final {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #1a4f86;
+      color: #ffffff;
+      padding: 16px 40px;
+      border-radius: 50px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      border: none;
+      margin-top: 20px;
+      transition: transform 0.2s, background 0.2s;
+      text-decoration: none;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease, background 0.2s;
+    }
+
+    .cta-final.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .cta-final:hover {
+      background: #144fd5;
+      transform: translateY(-3px) scale(1.02);
+    }
+
+    .cta-final svg {
+      width: 18px;
+      height: 18px;
+      stroke: #c5d6ec;
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+    }
+
+    .badge-row {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .badge {
+      background: #c5d6ec;
+      color: #1a4f86;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 6px 16px;
+      border-radius: 50px;
+      font-family: 'Space Mono', monospace;
+      letter-spacing: 0.5px;
+    }
+
+    @keyframes fadeDown {
+      from {
+        opacity: 0;
+        transform: translateY(-24px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+
+  <div class="acm-section">
+
+    <div class="hero">
+      <div class="acm-logo-area">
+        <div class="logo-placeholder">ACM</div>
+        <div class="brand-text">
+          <div class="org-name">ACM at UPIITA</div>
+          <div class="org-sub">Association for Computing Machinery</div>
+        </div>
+      </div>
+      <h1>Únete a la comunidad<br><span>tech más activa</span> del IPN</h1>
+      <p class="tagline">Somos el capítulo estudiantil de la organización de cómputo más grande del mundo. Aquí
+        aprendes,
+        conectas y construyes.</p>
+      <a href="#join-form" class="hero-cta"
+        onclick="document.getElementById('join-section').scrollIntoView({behavior:'smooth'}); return false;">
+        Quiero unirme
+      </a>
+      <div class="badge-row" style="margin-top:28px;">
+        <span class="badge">UPIITA · IPN</span>
+        <span class="badge">Convocatoria abierta</span>
+        <span class="badge">Gratis unirse</span>
+      </div>
+    </div>
+
+    <div class="benefits-section">
+      <p class="section-label obs-target">Por qué ACM at UPIITA</p>
+      <h2 class="section-title obs-target">Lo que ganas al ser miembro</h2>
+      <div class="benefits-grid">
+
+        <div class="benefit-card obs-target" style="transition-delay:0.05s">
+          <div class="benefit-icon">
+            <svg viewBox="0 0 24 24">
+              <circle cx="12" cy="8" r="4" />
+              <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" />
+            </svg>
+          </div>
+          <h3>Networking profesional</h3>
+          <p>Conecta con estudiantes, egresados y profesionales del sector tecnológico.</p>
+        </div>
+
+        <div class="benefit-card obs-target" style="transition-delay:0.12s">
+          <div class="benefit-icon">
+            <svg viewBox="0 0 24 24">
+              <rect x="3" y="4" width="18" height="14" rx="2" />
+              <path d="M8 20h8M12 18v2" />
+              <path d="M7 9l3 3 5-5" />
+            </svg>
+          </div>
+          <h3>Talleres y eventos técnicos</h3>
+          <p>Hackathons, workshops, charlas con expertos y más actividades prácticas.</p>
+        </div>
+
+        <div class="benefit-card obs-target" style="transition-delay:0.19s">
+          <div class="benefit-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 3l1.9 5.8H20l-4.9 3.6 1.9 5.8L12 15l-5 3.2 1.9-5.8L4 8.8h6.1z" />
+            </svg>
+          </div>
+          <h3>Certificaciones y recursos ACM</h3>
+          <p>Acceso a la biblioteca digital de ACM, cursos y certificados reconocidos internacionalmente.</p>
+        </div>
+
+        <div class="benefit-card obs-target" style="transition-delay:0.26s">
+          <div class="benefit-icon">
+            <svg viewBox="0 0 24 24">
+              <polyline points="16 18 22 12 16 6" />
+              <polyline points="8 6 2 12 8 18" />
+            </svg>
+          </div>
+          <h3>Proyectos y competencias</h3>
+          <p>Participa en proyectos reales, competencias de programación y olimpiadas estudiantiles.</p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="join-section" id="join-section">
+      <div class="join-wrapper">
+        <p class="section-label obs-target">Convocatoria abierta</p>
+        <h2 class="section-title obs-target">¿Cómo unirte?</h2>
+        <p class="obs-target"
+          style="font-size:14px;color:#4a7cb5;font-weight:300;margin:0 0 8px;opacity:0;transform:translateY(16px);transition:all 0.5s 0.15s ease;">
+          El proceso es sencillo, rápido y gratuito.</p>
+
+        <div class="steps-list">
+          <div class="step-item obs-target" style="transition-delay:0.1s">
+            <div class="step-num">01</div>
+            <div class="step-content">
+              <h4>Llena el formulario de registro</h4>
+              <p>Comparte tus datos básicos: nombre, carrera, semestre actual y tu CV!.</p>
+            </div>
+          </div>
+          <div class="step-item obs-target" style="transition-delay:0.2s">
+            <div class="step-num">02</div>
+            <div class="step-content">
+              <h4>Recibe confirmación</h4>
+              <p>Te enviamos un correo con los detalles de bienvenida y acceso a nuestros canales.</p>
+            </div>
+          </div>
+          <div class="step-item obs-target" style="transition-delay:0.3s">
+            <div class="step-num">03</div>
+            <div class="step-content">
+              <h4>¡Eres parte de ACM at UPIITA!</h4>
+              <p>Participa en eventos, talleres y conecta con la comunidad desde el primer día.</p>
+            </div>
+          </div>
+        </div>
+
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScKYarVziUAa5E_eqZucU615cmTP_fH5SfGhucLBG1QPEnjmA/viewform"
+          class="cta-final obs-target" onclick="return true;">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 20h9" />
+            <path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4 12.5-12.5z" />
+          </svg>
+          Llenar formulario de registro
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('.obs-target').forEach(el => obs.observe(el));
+  </script>
+</body>
+
+</html>

@@ -11,7 +11,7 @@ const MEMBERS = [
     name: 'Valeria Varelas',
     role: 'Chair',
     photo: '/member_photos/valeria_varelas.jpg',
-    github: '#',
+    github: 'https://github.com/avilavarelaslidiavaleria-pixel',
     linkedin: 'https://www.linkedin.com/in/lidia-valeria-avila-varelas-9a5631303/',
   },
   {
@@ -26,7 +26,7 @@ const MEMBERS = [
     role: 'Treasurer',
     photo: '/member_photos/erwin_daowz.jpg',
     github: '#',
-    linkedin: '#',
+    linkedin: 'https://www.linkedin.com/in/erwin-enrique-daowz-laguna-48a8a3325/',
   },
   {
     name: 'Danae Alvarez',
@@ -99,32 +99,32 @@ const EVENTS = [
     description: '¡Únete a nuestro equipo! Prepara tu CV y tu creatividad para nuestro proceso de selección. Fecha límite: 26 de Marzo del 2026',
     date: '16 de Marzo del 2026',
     status: 'In progress',
-    link: 'https://forms.gle/tB4tXLdq8yqes8BU8',
+    link: '/reclutamiento.html',
   },
   {
-    title: 'Google Event 2026',
-    description: '¡Google llega a UPIITA! Ven y conoce a una de las empresas líderes en tecnología del mundo. Trae tu CV para tener la oportunidad de ser contratado y hacer networking con reclutadores de Google.',
-    date: '17 de Marzo del 2026',
-    status: 'upcoming',
-  },
-  {
-    title: 'Reel #1 “Un día siendo ingeniero de ACM”',
-    description: '¡Conoce cómo es un día en la vida de un estdudiante de ingeniería de ACM!',
-    date: '20 de Marzo del 2026',
+    title: 'Taller de Notion”',
+    description: 'Aprovecha esta oportunidad para aprender a usar notion con nosotros, y de paso conocer a los miembros del capítulo.',
+    date: '13 de abril de 2026',
     status: 'upcoming',
   },
   {
     title: 'Taller GitHub',
     description: '¡Aprende a usar GitHub con nosotros!',
     date: '27 de Marzo del 2026',
-    status: 'upcoming',
+    status: 'past',
   },
   {
     title: 'Movie Night - PRESENTACION CHAPTER',
     description: '¡Ven a ver una peli con nosotros en el auditorio de UPIITA, y conoce a los miembros del capítulo!',
     date: '11 de Marzo del 2026',
     status: 'past',
-  }
+  },
+  {
+    title: 'Google Event 2026',
+    description: '¡Google llega a UPIITA! Ven y conoce a una de las empresas líderes en tecnología del mundo. Trae tu CV para tener la oportunidad de ser contratado y hacer networking con reclutadores de Google.',
+    date: '17 de Marzo del 2026',
+    status: 'past',
+  },
 ];
 
 /* =============================================
@@ -238,8 +238,9 @@ function buildEventCard(event) {
   const statusClass = event.status.toLowerCase().replace(' ', '-');
 
   // Botón opcional si existe el link
+  const isExternal = event.link && event.link.startsWith('http');
   const linkHtml = event.link
-    ? `<a href="${event.link}" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="margin-top: 16px; padding: 10px 24px; font-size: 0.85rem;">Ver más / Registro</a>`
+    ? `<a href="${event.link}"${isExternal ? ' target="_blank" rel="noopener noreferrer"' : ''} class="btn btn-primary" style="margin-top: 16px; padding: 10px 24px; font-size: 0.85rem;">Ver más / Registro</a>`
     : '';
 
   return `
