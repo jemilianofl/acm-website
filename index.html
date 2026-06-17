@@ -1,236 +1,290 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ACM Student Chapter UPIITA</title>
-    <meta name="description" content="Capítulo Estudiantil de la Association for Computing Machinery en la Unidad Profesional Interdisciplinaria en Ingeniería y Tecnologías Avanzadas (UPIITA)." />
-    <meta name="theme-color" content="#050505" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="/src/style.css" />
-  </head>
-  <body>
-    <!-- ===== NAVBAR ===== -->
-    <nav class="navbar" id="navbar">
-      <div class="nav-container">
-        <a href="#hero" class="nav-logo">
-          <div class="logo-icon">
-            <span>ACM</span>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ACM Student Chapter UPIITA</title>
+  <meta name="description"
+    content="Capítulo Estudiantil de la Association for Computing Machinery en la Unidad Profesional Interdisciplinaria en Ingeniería y Tecnologías Avanzadas (UPIITA)." />
+  <meta name="theme-color" content="#050505" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+
+<body>
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <div class="logo-icon">
+          <span>ACM</span>
+        </div>
+        <div class="logo-text">
+          <span class="logo-chapter">Student Chapter</span>
+          <span class="logo-school">UPIITA</span>
+        </div>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#hero" class="nav-link active">Inicio</a></li>
+        <li><a href="#about" class="nav-link">Acerca</a></li>
+        <li><a href="#members" class="nav-link">Miembros</a></li>
+        <li><a href="#events" class="nav-link">Eventos</a></li>
+        <li><a href="#contact" class="nav-link">Contacto</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-overlay"></div>
+    <div class="hero-particles" id="heroParticles"></div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Association for Computing Machinery
+      </div>
+      <h1 class="hero-title">
+        <span class="hero-title-line">ACM Student</span>
+        <span class="hero-title-line accent">Chapter</span>
+        <span class="hero-title-line">UPIITA</span>
+      </h1>
+      <p class="hero-subtitle">
+        Impulsamos la innovación tecnológica y el desarrollo profesional de los estudiantes de cómputo en UPIITA,
+        conectando talento con oportunidades globales.
+      </p>
+      <div class="hero-cta">
+        <a href="#members" class="btn btn-primary">Conoce al equipo</a>
+        <a href="#about" class="btn btn-secondary">Saber más</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-number">12+</span>
+          <span class="stat-label">Miembros activos</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-number">2026</span>
+          <span class="stat-label">Fundación</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-number">∞</span>
+          <span class="stat-label">Aprendizaje</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">¿Quiénes somos?</span>
+        <h2 class="section-title">Sobre el capítulo</h2>
+        <p class="section-desc">Somos la comunidad de cómputo más activa de UPIITA, afiliada a la organización técnica y
+          científica más grande del mundo en computación.</p>
+      </div>
+      <div class="about-grid">
+        <div class="glass-card about-card" data-animate>
+          <div class="card-icon">
+            <!-- Ícono copiado de lucide.dev -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10" />
+              <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
+              <path d="M2 12h20" />
+            </svg>
           </div>
-          <div class="logo-text">
-            <span class="logo-chapter">Student Chapter</span>
-            <span class="logo-school">UPIITA</span>
+          <h3>¿Qué es ACM?</h3>
+          <p>La Association for Computing Machinery es la organización científica y educativa de informática más grande
+            del mundo, con más de 100,000 miembros en más de 190 países.</p>
+        </div>
+        <div class="glass-card about-card featured" data-animate>
+          <div class="card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z" />
+              <path d="M22 10v6" />
+              <path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5" />
+            </svg>
           </div>
+          <h3>ACM UPIITA</h3>
+          <p>Somos el capítulo estudiantil en la Unidad Profesional Interdisciplinaria en Ingeniería y Tecnologías
+            Avanzadas del IPN. Conectamos a estudiantes apasionados por la tecnología.</p>
+        </div>
+        <div class="glass-card about-card" data-animate>
+          <div class="card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" />
+              <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09" />
+              <path d="M9 12a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.4 22.4 0 0 1-4 2z" />
+              <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 .05 5 .05" />
+            </svg>
+          </div>
+          <h3>Nuestra misión</h3>
+          <p>Fomentar el conocimiento en ciencias de la computación, promover la colaboración entre pares y vincular a
+            los estudiantes con la industria y la investigación.</p>
+        </div>
+      </div>
+
+      <div class="pillar-strip">
+        <div class="pillar">
+          <span>Innovación</span>
+        </div>
+        <div class="pillar">
+          <span>Colaboración</span>
+        </div>
+        <div class="pillar">
+          <span>Aprendizaje</span>
+        </div>
+        <div class="pillar">
+          <span>Excelencia</span>
+        </div>
+        <div class="pillar">
+          <span>Comunidad global</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MEMBERS ===== -->
+  <section class="section section-dark" id="members">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">El equipo</span>
+        <h2 class="section-title">Nuestros miembros</h2>
+        <p class="section-desc">Conoce a las personas que hacen posible el capítulo.</p>
+      </div>
+    </div>
+
+    <div class="container" id="membersGrid">
+      <div class="members-grid"></div>
+    </div>
+  </section>
+
+  <!-- ===== EVENTS ===== -->
+  <section class="section" id="events">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Actividades</span>
+        <h2 class="section-title">Eventos</h2>
+        <p class="section-desc">Talleres, hackathons, charlas y más</p>
+      </div>
+      <div class="events-grid" id="eventsGrid">
+        <!-- JS popula las cards -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="section section-dark" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Contacto</span>
+        <h2 class="section-title">Únete o contáctanos</h2>
+        <p class="section-desc">¿Eres estudiante del IPN y te interesa la computación? ¡Nos encantaría conocerte!</p>
+      </div>
+      <div class="contact-grid">
+        <a href="mailto:acmupiita@gmail.com" class="glass-card contact-card" data-animate
+          style="text-decoration: none; color: inherit; display: flex;">
+          <div class="contact-icon-wrapper">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+              <rect width="20" height="16" x="2" y="4" rx="2" />
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+            </svg>
+          </div>
+          <h3>Correo</h3>
+          <p>acmupiita@gmail.com</p>
         </a>
-        <ul class="nav-links" id="navLinks">
-          <li><a href="#hero" class="nav-link active">Inicio</a></li>
-          <li><a href="#about" class="nav-link">Acerca</a></li>
-          <li><a href="#members" class="nav-link">Miembros</a></li>
-          <li><a href="#events" class="nav-link">Eventos</a></li>
-          <li><a href="#contact" class="nav-link">Contacto</a></li>
-        </ul>
-        <button class="hamburger" id="hamburger" aria-label="Menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
+        <a href="https://www.instagram.com/acm.upiita" target="_blank" rel="noopener noreferrer"
+          class="glass-card contact-card" data-animate style="text-decoration: none; color: inherit; display: flex;">
+          <div class="contact-icon-wrapper">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+              <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+              <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+            </svg>
+          </div>
+          <h3>Instagram</h3>
+          <p>@acm.upiita</p>
+        </a>
+        <a href="https://www.linkedin.com/company/acm-student-chapter-upiita-ipn/posts/" target="_blank"
+          rel="noopener noreferrer" class="glass-card contact-card" data-animate
+          style="text-decoration: none; color: inherit; display: flex;">
+          <div class="contact-icon-wrapper">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+              <rect width="4" height="12" x="2" y="9" />
+              <circle cx="4" cy="4" r="2" />
+            </svg>
+          </div>
+          <h3>LinkedIn</h3>
+          <p>ACM Student Chapter UPIITA</p>
+        </a>
       </div>
-    </nav>
+    </div>
+  </section>
 
-    <!-- ===== HERO ===== -->
-    <section class="hero" id="hero">
-      <div class="hero-bg-overlay"></div>
-      <div class="hero-particles" id="heroParticles"></div>
-      <div class="hero-content">
-        <div class="hero-badge">
-          <span class="badge-dot"></span>
-          Association for Computing Machinery
-        </div>
-        <h1 class="hero-title">
-          <span class="hero-title-line">ACM Student</span>
-          <span class="hero-title-line accent">Chapter</span>
-          <span class="hero-title-line">UPIITA</span>
-        </h1>
-        <p class="hero-subtitle">
-          Impulsamos la innovación tecnológica y el desarrollo profesional de los estudiantes de cómputo en UPIITA, conectando talento con oportunidades globales.
-        </p>
-        <div class="hero-cta">
-          <a href="#members" class="btn btn-primary">Conoce al equipo</a>
-          <a href="#about" class="btn btn-secondary">Saber más</a>
-        </div>
-        <div class="hero-stats">
-          <div class="stat">
-            <span class="stat-number">12+</span>
-            <span class="stat-label">Miembros activos</span>
-          </div>
-          <div class="stat-divider"></div>
-          <div class="stat">
-            <span class="stat-number">2024</span>
-            <span class="stat-label">Fundación</span>
-          </div>
-          <div class="stat-divider"></div>
-          <div class="stat">
-            <span class="stat-number">∞</span>
-            <span class="stat-label">Aprendizaje</span>
-          </div>
-        </div>
-      </div>
-      <div class="hero-scroll-indicator">
-        <span>Scroll</span>
-        <div class="scroll-line"></div>
-      </div>
-    </section>
-
-    <!-- ===== ABOUT ===== -->
-    <section class="section" id="about">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag">¿Quiénes somos?</span>
-          <h2 class="section-title">Sobre el capítulo</h2>
-          <p class="section-desc">Somos la comunidad de cómputo más activa de UPIITA, afiliada a la organización técnica y científica más grande del mundo en computación.</p>
-        </div>
-        <div class="about-grid">
-          <div class="glass-card about-card" data-animate>
-            <div class="card-icon">🌐</div>
-            <h3>¿Qué es ACM?</h3>
-            <p>La Association for Computing Machinery es la organización científica y educativa de informática más grande del mundo, con más de 100,000 miembros en más de 190 países.</p>
-          </div>
-          <div class="glass-card about-card featured" data-animate>
-            <div class="card-icon">🎓</div>
-            <h3>ACM UPIITA</h3>
-            <p>Somos el capítulo estudiantil en la Unidad Profesional Interdisciplinaria en Ingeniería y Tecnologías Avanzadas del IPN. Conectamos a estudiantes apasionados por la tecnología.</p>
-          </div>
-          <div class="glass-card about-card" data-animate>
-            <div class="card-icon">🚀</div>
-            <h3>Nuestra misión</h3>
-            <p>Fomentar el conocimiento en ciencias de la computación, promover la colaboración entre pares y vincular a los estudiantes con la industria y la investigación.</p>
-          </div>
-        </div>
-
-        <div class="pillar-strip">
-          <div class="pillar">
-            <span class="pillar-icon">💡</span>
-            <span>Innovación</span>
-          </div>
-          <div class="pillar">
-            <span class="pillar-icon">🤝</span>
-            <span>Colaboración</span>
-          </div>
-          <div class="pillar">
-            <span class="pillar-icon">📚</span>
-            <span>Aprendizaje</span>
-          </div>
-          <div class="pillar">
-            <span class="pillar-icon">🏆</span>
-            <span>Excelencia</span>
-          </div>
-          <div class="pillar">
-            <span class="pillar-icon">🌐</span>
-            <span>Comunidad global</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== MEMBERS ===== -->
-    <section class="section section-dark" id="members">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag">El equipo</span>
-          <h2 class="section-title">Nuestros miembros</h2>
-          <p class="section-desc">Conoce a las personas que hacen posible el capítulo — estudiantes comprometidos con la computación y la innovación.</p>
-        </div>
-      </div>
-
-      <div class="container" id="membersGrid">
-        <div class="members-grid"></div>
-      </div>
-    </section>
-
-    <!-- ===== EVENTS ===== -->
-    <section class="section" id="events">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag">Actividades</span>
-          <h2 class="section-title">Eventos</h2>
-          <p class="section-desc">Talleres, hackathons, charlas y más — siempre hay algo pasando en ACM UPIITA.</p>
-        </div>
-        <div class="events-grid" id="eventsGrid">
-          <!-- JS popula las cards -->
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== CONTACT ===== -->
-    <section class="section section-dark" id="contact">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag">Contacto</span>
-          <h2 class="section-title">Únete o contáctanos</h2>
-          <p class="section-desc">¿Eres estudiante de UPIITA y te interesa la computación? ¡Nos encantaría conocerte!</p>
-        </div>
-        <div class="contact-grid">
-          <div class="glass-card contact-card" data-animate>
-            <div class="card-icon">📧</div>
-            <h3>Correo</h3>
-            <p>acm.upiita@gmail.com</p>
-          </div>
-          <div class="glass-card contact-card" data-animate>
-            <div class="card-icon">📸</div>
-            <h3>Instagram</h3>
-            <p>@acm_upiita</p>
-          </div>
-          <div class="glass-card contact-card" data-animate>
-            <div class="card-icon">💼</div>
-            <h3>LinkedIn</h3>
-            <p>ACM Student Chapter UPIITA</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== FOOTER ===== -->
-    <footer class="footer" id="footer">
-      <div class="container">
-        <div class="footer-grid">
-          <div class="footer-brand">
-            <div class="nav-logo">
-              <div class="logo-icon"><span>ACM</span></div>
-              <div class="logo-text">
-                <span class="logo-chapter">Student Chapter</span>
-                <span class="logo-school">UPIITA</span>
-              </div>
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="nav-logo">
+            <div class="logo-icon"><span>ACM</span></div>
+            <div class="logo-text">
+              <span class="logo-chapter">Student Chapter</span>
+              <span class="logo-school">UPIITA</span>
             </div>
-            <p class="footer-desc">Capítulo estudiantil de la Association for Computing Machinery en UPIITA – IPN, México.</p>
           </div>
-          <div class="footer-nav">
-            <h4>Navegación</h4>
-            <ul>
-              <li><a href="#hero">Inicio</a></li>
-              <li><a href="#about">Acerca</a></li>
-              <li><a href="#members">Miembros</a></li>
-              <li><a href="#events">Eventos</a></li>
-            </ul>
-          </div>
-          <div class="footer-social">
-            <h4>Síguenos</h4>
-            <ul>
-              <li><a href="#">Instagram</a></li>
-              <li><a href="#">LinkedIn</a></li>
-              <li><a href="#">GitHub</a></li>
-              <li><a href="https://www.acm.org" target="_blank" rel="noopener">ACM Global</a></li>
-            </ul>
-          </div>
+          <p class="footer-desc">Capítulo estudiantil de la Association for Computing Machinery en UPIITA – IPN, México.
+          </p>
         </div>
-        <div class="footer-bottom">
-          <p>© 2024 ACM Student Chapter UPIITA · Todos los derechos reservados.</p>
-          <p>Afiliado a la <a href="https://www.acm.org" target="_blank" rel="noopener">Association for Computing Machinery</a></p>
+        <div class="footer-nav">
+          <h4>Navegación</h4>
+          <ul>
+            <li><a href="#hero">Inicio</a></li>
+            <li><a href="#about">Acerca</a></li>
+            <li><a href="#members">Miembros</a></li>
+            <li><a href="#events">Eventos</a></li>
+          </ul>
+        </div>
+        <div class="footer-social">
+          <h4>Síguenos</h4>
+          <ul>
+            <li><a href="https://www.instagram.com/acm.upiita" target="_blank" rel="noopener noreferrer">Instagram</a>
+            </li>
+            <li><a href="https://www.linkedin.com/company/acm-student-chapter-upiita-ipn/" target="_blank"
+                rel="noopener noreferrer">LinkedIn</a></li>
+            <li><a href="#">GitHub</a></li>
+            <li><a href="https://www.acm.org" target="_blank" rel="noopener noreferrer">ACM Global</a></li>
+          </ul>
         </div>
       </div>
-    </footer>
+      <div class="footer-bottom">
+        <p>© 2026 ACM Student Chapter UPIITA · Todos los derechos reservados.</p>
+        <p>Afiliado a la <a href="https://www.acm.org" target="_blank" rel="noopener">Association for Computing
+            Machinery</a></p>
+      </div>
+    </div>
+  </footer>
 
-    <script type="module" src="/src/main.js"></script>
-  </body>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
 </html>
